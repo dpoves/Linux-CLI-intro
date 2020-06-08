@@ -10,7 +10,7 @@
 
 * _Blum, Richard. Bresnahan, Christine_. **Linux Command Line and Shell Scripting Bible, 3rd edition**, Wiley, 2015.
 
-* _Nemeth, Evi. Snyder, Garth. Hein, Trent R.. Whaley, Ben. Mackin, Dan . with Garnett, James . Branca,Fabrizio . Mouat, Adrian _. **Unix and Linux System Administration Handbook, 5th edition**,  Pearson Addison-Wesley, 2018.
+* _Nemeth, Evi; Snyder, Garth; Hein, Trent R.; Whaley, Ben; Mackin, Dan; with Garnett, James; Branca,Fabrizio; Mouat, Adrian_. **Unix and Linux System Administration Handbook, 5th edition**,  Pearson Addison-Wesley, 2018.
 
 ## Online Technical References
 
