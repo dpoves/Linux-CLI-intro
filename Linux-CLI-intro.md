@@ -27,6 +27,31 @@ The first part covers some theory that will allow you to understand what Linux i
 
 I will be quite happy to hear any feedback, let me know about any typos so they can be corrected and feel free to take part if you want to.
 
+## A note on console fonts
+Consoles are configured by default with monospace fonts and that have clear and distinctive fonts.
+
+The reason for this is that some characters with certain fonts are difficult to distinguish.
+
+The clearest example are 1, I l, 0 and O.
+
+If this document has been rendered in a way that you can't differentiate between the above charactesrs please get an updates version or go to the course's website to get a different or updated version:
+
+https://github.com/dpoves/Linux-CLI-intro
+
+
+## Getting in touch
+If you want to get in touch you can reach me via the following.
+
+**Technical Blog**
+https://pov.es
+
+**GitHub**
+https://github.com/dpoves
+
+Any feedback is appreciated. If you find any typos, feel that certain sections aren't clear enough or find any mistakes, please let me me know.
+
+I hope you find the course useful!
+
 # 1.1 - Definition of an Operating System
 -----------------------------------------
 
@@ -1060,10 +1085,45 @@ Individual specialised tools or programs that can easily interact between them t
 # 2.3 - Launching programs and creating aliases
 -----------------------------------------------
 
+## clear
+Sometimes the output on the screen might make things too garbled or difficult to read. Specially if you are listing many different files.
 
-clear, ctrl+L
+You can easily clear the screen contents with the **clear** command.
 
-[TAB]
+```shell
+$ clear
+```
+
+We will be seeing later on some keyboard shortcuts but you can achieve the same result with the keyboard combination of **ctrl-L**. 
+
+## Using the [TAB] key
+The Bash shell has an autocompletion feature that is triggered with the tab key.
+
+When you are typing a command, file or directory name, you can press the TAB key to autocomplete.
+
+For example, type **l** and immediately after press TAB:
+
+```shell
+$ l[TAB]
+Display all 126 possibilities? (y or n)
+```
+
+There are 126 commands that start with the letter l. The more characters you type the lower the options will and also the way those options are displayed:
+
+```shell
+$ ls[TAB]
+ls           lsblk        lshw         lslocks      lsmod        lspci        lsusb        
+lsar         lsb_release  lsinitramfs  lslogins     lsns         lspcmcia     
+lsattr       lscpu        lsipc        lsmem        lsof         lspgpot
+```
+
+After you press the TAB the shell still expects you to press ENTER before accepting the commands. You can always delete and try again.
+
+TAB will also autocomplete file and directory names. Experiment with it because it will save you a lot of typing.
+
+
+
+
 
 echo
 
