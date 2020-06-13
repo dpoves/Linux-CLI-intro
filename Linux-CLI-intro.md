@@ -1273,7 +1273,7 @@ $ \ls
 Desktop  Documents  Downloads  Images  Music  Pictures  Public  Templates  Videos
 ```
 
-The only difference in this instance is that the unalias **ls** won't colourise the output.
+The only difference in this instance is that the unaliased **ls** won't colourise the output.
 
 # 2.3.1 - Launching programs and creating aliases key points
 ------------------------------------------------------------
