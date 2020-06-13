@@ -33,7 +33,7 @@ Consoles are configured by default with monospace fonts and that have clear and 
 
 The reason for this is that some characters with certain fonts are difficult to distinguish.
 
-The clearest example are 1, I l, 0 and O.
+The clearest example are 1, I, l, 0 and O.
 
 If this document has been rendered in a way that you can't differentiate between the above charactesrs please get an updates version or go to the course's website to get a different or updated version:
 
