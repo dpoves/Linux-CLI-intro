@@ -470,8 +470,8 @@ The 10 principles have a resemblance to the FSF's four freedoms. There are, as i
 --------------------
 
 
-# 2.1 - Moving around directories
----------------------------------
+# 2.1.0 - Moving around directories
+-----------------------------------
 
 ## Console prompt
 When you first open your terminal you will be greeted with a prompt similar to this:
@@ -653,22 +653,22 @@ We already mentioned that normally all user directories are in _/home_. The only
 
 Note that the _root directory_ (**/**) isn't the same as the _root account_ home directory (**/root**).
 
+# 2.1.1 - Moving around directories key points
+-----------------------------------
 
-## Key Points
-
-### Commands
+## Commands
 ```shell
 pwd		Print Working Directory
 cd 		Change Directory
 ```
 
-### Concepts
+## Concepts
 ```
 Absolute paths
 Relative paths
 ```
 
-### Folder references
+## Folder references
 ```
 .	Current directory
 ..	Directory above current one
@@ -676,7 +676,7 @@ Relative paths
 /	Root directory
 ```
 
-### Shortcuts
+## Shortcuts
 ```
 cd				Move to your home directory 
 
@@ -687,7 +687,7 @@ cd -			Move back to the dir you were previously
 cd /home/d*		Move to the folder starting with d in /home
 ```
 
-## Further reading
+# Further reading
 
 * _Robbins, Arnold_. **Bash Pocket Reference**, O'Reilly, 2010. **Pages 1-8**
 
@@ -697,7 +697,7 @@ cd /home/d*		Move to the folder starting with d in /home
 
 * _Blum, Richard; Bresnahan, Christine_. **Linux Command Line and Shell Scripting Bible, 3rd edition**, Wiley, 2015. **Chapters 3, 5 and 23**
 
-# 2.1.1 - Moving around directories (EXERCISES)
+# 2.1.2 - Moving around directories (EXERCISES)
 -----------------------------------------------
 
 ## Exercises
@@ -712,8 +712,8 @@ cd /home/d*		Move to the folder starting with d in /home
 8. Give an example of relative path and another of an absolute path.
 9. How do you move up one directory?
 
-# 2.2 - Listing files
----------------------
+# 2.2.0 - Listing files
+-----------------------
 
 Before we start looking at more commands a brief note on their syntax.
 
@@ -1013,26 +1013,27 @@ Right now it is only one command, but soon enough you will learn how to make com
 
 The above list isn't meant to be memorised. You only need to know that **ls** has many arguments that can help you list files you need, in a specific order, with a given format and the information of your choice.
 
-## Key Points
+# 2.2.0 - Listing files key points
+----------------------------------
 
-### Commands
+## Commands
 ```shell
 ls		List files
 ```
 
-### Concepts
+## Concepts
 ```
 command [options] [arguments]
 ```
 
-### Wilcards
+## Wilcards
 ```
 *	Zero or more characters
 ?	One character
 []	Range of characters
 ```
 
-### Ranges
+## Ranges
 ```
 [abc]   Characters a, b or c
 
@@ -1051,11 +1052,11 @@ command [options] [arguments]
 [!a-b,d] Any characters except a to b and d
 ```
 
-### Unix philosopy
+## Unix philosopy
 Individual specialised tools or programs that can easily interact between them to solve more complicated problems.
 
 
-## Further reading
+# Further reading
 * _Robbins, Arnold_. **Bash Pocket Reference**, O'Reilly, 2010. **Pages 1-8**
 
 * _Ward, Brian_. **How Linux Works, 2nd edition**, No Starch Press, 2015. **Chapter 2**
@@ -1066,9 +1067,8 @@ Individual specialised tools or programs that can easily interact between them t
 
 * FreeBSD man page for ls in Debian 8.1.0 https://www.freebsd.org/cgi/man.cgi?query=ls&apropos=0&sektion=0&manpath=Debian+8.1.0&arch=default&format=html
 
-# 2.2 - Listing files (EXERCISES)
----------------------------------
-
+# 2.2.2 - Listing files (EXERCISES)
+-----------------------------------
 
 ## Exercises
 1. List the contents of the folder above the one you are currently in without leaving it.
@@ -1082,8 +1082,8 @@ Individual specialised tools or programs that can easily interact between them t
 9. List all the files in /sbin which the second character is a vowel.
 10. Using **cd** and **ls** navigate around your systems folders and familiarise yourself with the commands.
 
-# 2.3 - Launching programs and creating aliases
------------------------------------------------
+# 2.3.0 - Launching programs and creating aliases
+-------------------------------------------------
 
 ## clear
 Sometimes the output on the screen might make things too garbled or difficult to read. Specially if you are listing many different files.
@@ -1122,18 +1122,157 @@ After you press the TAB the shell still expects you to press ENTER before accept
 TAB will also autocomplete file and directory names. Experiment with it because it will save you a lot of typing.
 
 
+## echo
+In the first example, when you pressed the TAB key to autocomplete it showed that there were 126 matches. This is a huge list of commands. Those are all commands that are in your PATH variable. This works exactly the same as in DOS/Windows, when you type a command the directories that are in your PATH variable are searched and if that command is found, it is executed.
+
+You can use the **echo** command to display messages, but also to show the value of system variables. System variables are traditionally uppercase.
+
+```shell
+$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+```
+
+The result of the command shows all of the directories where commands and programs are searched for execution.
+
+The other usage for **echo** is to display messages:
+
+```shell
+$ echo Hello
+Hello
+```
+
+This doesn't look very useful at the moment, but if you develop shell scripts later on, you might want to display a message upon completion or when a certain action is taking place.
 
 
+## Launching programs
+We saw before that the $PATH variable indicates which directories are searched when you type a command.
 
-echo
+Linux/Unix won't execute a program in the local folder like DOS/Windows does. Unless the directory is in the $PATH variable you need to explicitely indicate you want to execute a program.
 
-Launching programs 
-	./
+This is done for security reasons. An attacker could create a programm in a directory with the same name as a commonly invoked program and trick an administrator into executing it without realising that it is a local and malicious program.
 
-file
+If you want to execute a program and you want to explicitly indicate that it is a local one you will need to add **./** in the front.
 
-alias, unalias, \
+Remember the directory reference characters from section 2.1? We used **..** for the directory above the current one and we mentioned **.** for the current directory.
 
+This is what the dot in **./** indicates, the local directory. The forward slash **/** is to separate the directory from the file name, as you do with any path name that contains at least one directory and file.
+
+So, to execute a a program in the local directory you will add the **./** in front:
+
+```shell
+$ cd /bin
+$ ./lsusb
+[...]
+```
+
+**./lsusb** will execute the program called _lsusb_ in the local folder (/bin)which lists your USB devices. This command will be seen in more detail later on, right now it is only used as an example on how to execute a program in your current directory.
+
+If you also recall we spoke about relative and absolute paths. The **./** invocation is a relative path. You can use an absolute path to execute a program without having to change directories or if you want to execute a specific version, in case that more than one version is installed.
+
+```shell
+$ cd
+$ /bin/lsusb
+[...]
+```
+
+The above example executes the same program but without being in the same directory by using the absolute path.
+
+
+## file
+The command **file** will allow you to know what a file type is.
+
+We have mentioned that in Unix/Linux file extensions aren't necessary. They are still used but not always. That means that many files don't have a file extension.
+
+You can use **file** to get information about what type of file a given one is:
+
+```shell
+$ file /bin/lsusb
+/bin/lsusb: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=3a9a52954527a4faa60a90b2388a9964c85e7bba, for GNU/Linux 3.2.0, stripped
+
+$ file /etc/fstab 
+/etc/fstab: ASCII text
+```
+
+In the above example one file is 64 bit executable and the other is a text file.
+
+
+## Aliases
+The last command we will learn in this section is **alias**.
+
+**alias** allows you to create an alias for one or more commands. Without arguments it will display the existing aliases.
+
+```shell
+$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+```
+ Your output might differ depending on the Linux distro you are using. This example shows the aliases on my system.
+
+ We will create a new alias to list all files in human readable format:
+
+ ```shell
+ $ alias .='ls -lh'
+ ```
+
+Now when I type **.** it will execute the alias I have just created:
+
+```shell
+$ . /bin/lsusb 
+-rwxr-xr-x 1 root root 243K Oct  1  2019 /bin/lsusb
+```
+
+You can edit an existing alias by just re-issuing:
+
+```shell
+ $ alias .='ls -gh'
+ $ . /bin/lsusb 
+-rwxr-xr-x 1 root 243K Oct  1  2019 /bin/lsusb
+ ```
+
+ Aliases are only valid for the current session unless they are stored. We won't be looking at this yet.
+
+ If you want to remove an alias you can use **unalias**:
+
+ ```shell
+$ alias
+alias .='ls -gh'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+$ unalias .
+$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+```
+
+In my output **ls** is an alias of the command of the same name. You can do this and it won't clash. Aliases will be executed ahead of the command if the names match. This can be useful if you want to force certain arguments on a command by default.
+
+> alias ls='ls --color=auto'
+
+If you want **ls** to be the command rather than the alias you can **unalias** it, but sometimes you just want the unaliased command temporarily.
+
+You can achieve this by executing the command with a \ in front. This will tell the console that the command should be executed unaliased.
+
+```shell
+$ \ls
+Desktop  Documents  Downloads  Images  Music  Pictures  Public  Templates  Videos
+```
+
+The only different in this instance that the unalias **ls** won't colourise the output.
 
 # Bibliography
 --------------
@@ -1162,3 +1301,431 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/
 
 ## Other
 * Williams, Sam. **Free as in Freedom: Richard Stallman's Crusade for Free Software**, O'Reilly, 2002.
+
+Attribution-ShareAlike 4.0 International
+
+=======================================================================
+
+Creative Commons Corporation ("Creative Commons") is not a law firm and
+does not provide legal services or legal advice. Distribution of
+Creative Commons public licenses does not create a lawyer-client or
+other relationship. Creative Commons makes its licenses and related
+information available on an "as-is" basis. Creative Commons gives no
+warranties regarding its licenses, any material licensed under their
+terms and conditions, or any related information. Creative Commons
+disclaims all liability for damages resulting from their use to the
+fullest extent possible.
+
+Using Creative Commons Public Licenses
+
+Creative Commons public licenses provide a standard set of terms and
+conditions that creators and other rights holders may use to share
+original works of authorship and other material subject to copyright
+and certain other rights specified in the public license below. The
+following considerations are for informational purposes only, are not
+exhaustive, and do not form part of our licenses.
+
+     Considerations for licensors: Our public licenses are
+     intended for use by those authorized to give the public
+     permission to use material in ways otherwise restricted by
+     copyright and certain other rights. Our licenses are
+     irrevocable. Licensors should read and understand the terms
+     and conditions of the license they choose before applying it.
+     Licensors should also secure all rights necessary before
+     applying our licenses so that the public can reuse the
+     material as expected. Licensors should clearly mark any
+     material not subject to the license. This includes other CC-
+     licensed material, or material used under an exception or
+     limitation to copyright. More considerations for licensors:
+     wiki.creativecommons.org/Considerations_for_licensors
+
+     Considerations for the public: By using one of our public
+     licenses, a licensor grants the public permission to use the
+     licensed material under specified terms and conditions. If
+     the licensor's permission is not necessary for any reason--for
+     example, because of any applicable exception or limitation to
+     copyright--then that use is not regulated by the license. Our
+     licenses grant only permissions under copyright and certain
+     other rights that a licensor has authority to grant. Use of
+     the licensed material may still be restricted for other
+     reasons, including because others have copyright or other
+     rights in the material. A licensor may make special requests,
+     such as asking that all changes be marked or described.
+     Although not required by our licenses, you are encouraged to
+     respect those requests where reasonable. More considerations
+     for the public:
+     wiki.creativecommons.org/Considerations_for_licensees
+
+=======================================================================
+
+Creative Commons Attribution-ShareAlike 4.0 International Public
+License
+
+By exercising the Licensed Rights (defined below), You accept and agree
+to be bound by the terms and conditions of this Creative Commons
+Attribution-ShareAlike 4.0 International Public License ("Public
+License"). To the extent this Public License may be interpreted as a
+contract, You are granted the Licensed Rights in consideration of Your
+acceptance of these terms and conditions, and the Licensor grants You
+such rights in consideration of benefits the Licensor receives from
+making the Licensed Material available under these terms and
+conditions.
+
+
+Section 1 -- Definitions.
+
+  a. Adapted Material means material subject to Copyright and Similar
+     Rights that is derived from or based upon the Licensed Material
+     and in which the Licensed Material is translated, altered,
+     arranged, transformed, or otherwise modified in a manner requiring
+     permission under the Copyright and Similar Rights held by the
+     Licensor. For purposes of this Public License, where the Licensed
+     Material is a musical work, performance, or sound recording,
+     Adapted Material is always produced where the Licensed Material is
+     synched in timed relation with a moving image.
+
+  b. Adapter's License means the license You apply to Your Copyright
+     and Similar Rights in Your contributions to Adapted Material in
+     accordance with the terms and conditions of this Public License.
+
+  c. BY-SA Compatible License means a license listed at
+     creativecommons.org/compatiblelicenses, approved by Creative
+     Commons as essentially the equivalent of this Public License.
+
+  d. Copyright and Similar Rights means copyright and/or similar rights
+     closely related to copyright including, without limitation,
+     performance, broadcast, sound recording, and Sui Generis Database
+     Rights, without regard to how the rights are labeled or
+     categorized. For purposes of this Public License, the rights
+     specified in Section 2(b)(1)-(2) are not Copyright and Similar
+     Rights.
+
+  e. Effective Technological Measures means those measures that, in the
+     absence of proper authority, may not be circumvented under laws
+     fulfilling obligations under Article 11 of the WIPO Copyright
+     Treaty adopted on December 20, 1996, and/or similar international
+     agreements.
+
+  f. Exceptions and Limitations means fair use, fair dealing, and/or
+     any other exception or limitation to Copyright and Similar Rights
+     that applies to Your use of the Licensed Material.
+
+  g. License Elements means the license attributes listed in the name
+     of a Creative Commons Public License. The License Elements of this
+     Public License are Attribution and ShareAlike.
+
+  h. Licensed Material means the artistic or literary work, database,
+     or other material to which the Licensor applied this Public
+     License.
+
+  i. Licensed Rights means the rights granted to You subject to the
+     terms and conditions of this Public License, which are limited to
+     all Copyright and Similar Rights that apply to Your use of the
+     Licensed Material and that the Licensor has authority to license.
+
+  j. Licensor means the individual(s) or entity(ies) granting rights
+     under this Public License.
+
+  k. Share means to provide material to the public by any means or
+     process that requires permission under the Licensed Rights, such
+     as reproduction, public display, public performance, distribution,
+     dissemination, communication, or importation, and to make material
+     available to the public including in ways that members of the
+     public may access the material from a place and at a time
+     individually chosen by them.
+
+  l. Sui Generis Database Rights means rights other than copyright
+     resulting from Directive 96/9/EC of the European Parliament and of
+     the Council of 11 March 1996 on the legal protection of databases,
+     as amended and/or succeeded, as well as other essentially
+     equivalent rights anywhere in the world.
+
+  m. You means the individual or entity exercising the Licensed Rights
+     under this Public License. Your has a corresponding meaning.
+
+
+Section 2 -- Scope.
+
+  a. License grant.
+
+       1. Subject to the terms and conditions of this Public License,
+          the Licensor hereby grants You a worldwide, royalty-free,
+          non-sublicensable, non-exclusive, irrevocable license to
+          exercise the Licensed Rights in the Licensed Material to:
+
+            a. reproduce and Share the Licensed Material, in whole or
+               in part; and
+
+            b. produce, reproduce, and Share Adapted Material.
+
+       2. Exceptions and Limitations. For the avoidance of doubt, where
+          Exceptions and Limitations apply to Your use, this Public
+          License does not apply, and You do not need to comply with
+          its terms and conditions.
+
+       3. Term. The term of this Public License is specified in Section
+          6(a).
+
+       4. Media and formats; technical modifications allowed. The
+          Licensor authorizes You to exercise the Licensed Rights in
+          all media and formats whether now known or hereafter created,
+          and to make technical modifications necessary to do so. The
+          Licensor waives and/or agrees not to assert any right or
+          authority to forbid You from making technical modifications
+          necessary to exercise the Licensed Rights, including
+          technical modifications necessary to circumvent Effective
+          Technological Measures. For purposes of this Public License,
+          simply making modifications authorized by this Section 2(a)
+          (4) never produces Adapted Material.
+
+       5. Downstream recipients.
+
+            a. Offer from the Licensor -- Licensed Material. Every
+               recipient of the Licensed Material automatically
+               receives an offer from the Licensor to exercise the
+               Licensed Rights under the terms and conditions of this
+               Public License.
+
+            b. Additional offer from the Licensor -- Adapted Material.
+               Every recipient of Adapted Material from You
+               automatically receives an offer from the Licensor to
+               exercise the Licensed Rights in the Adapted Material
+               under the conditions of the Adapter's License You apply.
+
+            c. No downstream restrictions. You may not offer or impose
+               any additional or different terms or conditions on, or
+               apply any Effective Technological Measures to, the
+               Licensed Material if doing so restricts exercise of the
+               Licensed Rights by any recipient of the Licensed
+               Material.
+
+       6. No endorsement. Nothing in this Public License constitutes or
+          may be construed as permission to assert or imply that You
+          are, or that Your use of the Licensed Material is, connected
+          with, or sponsored, endorsed, or granted official status by,
+          the Licensor or others designated to receive attribution as
+          provided in Section 3(a)(1)(A)(i).
+
+  b. Other rights.
+
+       1. Moral rights, such as the right of integrity, are not
+          licensed under this Public License, nor are publicity,
+          privacy, and/or other similar personality rights; however, to
+          the extent possible, the Licensor waives and/or agrees not to
+          assert any such rights held by the Licensor to the limited
+          extent necessary to allow You to exercise the Licensed
+          Rights, but not otherwise.
+
+       2. Patent and trademark rights are not licensed under this
+          Public License.
+
+       3. To the extent possible, the Licensor waives any right to
+          collect royalties from You for the exercise of the Licensed
+          Rights, whether directly or through a collecting society
+          under any voluntary or waivable statutory or compulsory
+          licensing scheme. In all other cases the Licensor expressly
+          reserves any right to collect such royalties.
+
+
+Section 3 -- License Conditions.
+
+Your exercise of the Licensed Rights is expressly made subject to the
+following conditions.
+
+  a. Attribution.
+
+       1. If You Share the Licensed Material (including in modified
+          form), You must:
+
+            a. retain the following if it is supplied by the Licensor
+               with the Licensed Material:
+
+                 i. identification of the creator(s) of the Licensed
+                    Material and any others designated to receive
+                    attribution, in any reasonable manner requested by
+                    the Licensor (including by pseudonym if
+                    designated);
+
+                ii. a copyright notice;
+
+               iii. a notice that refers to this Public License;
+
+                iv. a notice that refers to the disclaimer of
+                    warranties;
+
+                 v. a URI or hyperlink to the Licensed Material to the
+                    extent reasonably practicable;
+
+            b. indicate if You modified the Licensed Material and
+               retain an indication of any previous modifications; and
+
+            c. indicate the Licensed Material is licensed under this
+               Public License, and include the text of, or the URI or
+               hyperlink to, this Public License.
+
+       2. You may satisfy the conditions in Section 3(a)(1) in any
+          reasonable manner based on the medium, means, and context in
+          which You Share the Licensed Material. For example, it may be
+          reasonable to satisfy the conditions by providing a URI or
+          hyperlink to a resource that includes the required
+          information.
+
+       3. If requested by the Licensor, You must remove any of the
+          information required by Section 3(a)(1)(A) to the extent
+          reasonably practicable.
+
+  b. ShareAlike.
+
+     In addition to the conditions in Section 3(a), if You Share
+     Adapted Material You produce, the following conditions also apply.
+
+       1. The Adapter's License You apply must be a Creative Commons
+          license with the same License Elements, this version or
+          later, or a BY-SA Compatible License.
+
+       2. You must include the text of, or the URI or hyperlink to, the
+          Adapter's License You apply. You may satisfy this condition
+          in any reasonable manner based on the medium, means, and
+          context in which You Share Adapted Material.
+
+       3. You may not offer or impose any additional or different terms
+          or conditions on, or apply any Effective Technological
+          Measures to, Adapted Material that restrict exercise of the
+          rights granted under the Adapter's License You apply.
+
+
+Section 4 -- Sui Generis Database Rights.
+
+Where the Licensed Rights include Sui Generis Database Rights that
+apply to Your use of the Licensed Material:
+
+  a. for the avoidance of doubt, Section 2(a)(1) grants You the right
+     to extract, reuse, reproduce, and Share all or a substantial
+     portion of the contents of the database;
+
+  b. if You include all or a substantial portion of the database
+     contents in a database in which You have Sui Generis Database
+     Rights, then the database in which You have Sui Generis Database
+     Rights (but not its individual contents) is Adapted Material,
+
+     including for purposes of Section 3(b); and
+  c. You must comply with the conditions in Section 3(a) if You Share
+     all or a substantial portion of the contents of the database.
+
+For the avoidance of doubt, this Section 4 supplements and does not
+replace Your obligations under this Public License where the Licensed
+Rights include other Copyright and Similar Rights.
+
+
+Section 5 -- Disclaimer of Warranties and Limitation of Liability.
+
+  a. UNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE
+     EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
+     AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
+     ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
+     IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
+     WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
+     PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS,
+     ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT
+     KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT
+     ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.
+
+  b. TO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE
+     TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION,
+     NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT,
+     INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES,
+     COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR
+     USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN
+     ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR
+     DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR
+     IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.
+
+  c. The disclaimer of warranties and limitation of liability provided
+     above shall be interpreted in a manner that, to the extent
+     possible, most closely approximates an absolute disclaimer and
+     waiver of all liability.
+
+
+Section 6 -- Term and Termination.
+
+  a. This Public License applies for the term of the Copyright and
+     Similar Rights licensed here. However, if You fail to comply with
+     this Public License, then Your rights under this Public License
+     terminate automatically.
+
+  b. Where Your right to use the Licensed Material has terminated under
+     Section 6(a), it reinstates:
+
+       1. automatically as of the date the violation is cured, provided
+          it is cured within 30 days of Your discovery of the
+          violation; or
+
+       2. upon express reinstatement by the Licensor.
+
+     For the avoidance of doubt, this Section 6(b) does not affect any
+     right the Licensor may have to seek remedies for Your violations
+     of this Public License.
+
+  c. For the avoidance of doubt, the Licensor may also offer the
+     Licensed Material under separate terms or conditions or stop
+     distributing the Licensed Material at any time; however, doing so
+     will not terminate this Public License.
+
+  d. Sections 1, 5, 6, 7, and 8 survive termination of this Public
+     License.
+
+
+Section 7 -- Other Terms and Conditions.
+
+  a. The Licensor shall not be bound by any additional or different
+     terms or conditions communicated by You unless expressly agreed.
+
+  b. Any arrangements, understandings, or agreements regarding the
+     Licensed Material not stated herein are separate from and
+     independent of the terms and conditions of this Public License.
+
+
+Section 8 -- Interpretation.
+
+  a. For the avoidance of doubt, this Public License does not, and
+     shall not be interpreted to, reduce, limit, restrict, or impose
+     conditions on any use of the Licensed Material that could lawfully
+     be made without permission under this Public License.
+
+  b. To the extent possible, if any provision of this Public License is
+     deemed unenforceable, it shall be automatically reformed to the
+     minimum extent necessary to make it enforceable. If the provision
+     cannot be reformed, it shall be severed from this Public License
+     without affecting the enforceability of the remaining terms and
+     conditions.
+
+  c. No term or condition of this Public License will be waived and no
+     failure to comply consented to unless expressly agreed to by the
+     Licensor.
+
+  d. Nothing in this Public License constitutes or may be interpreted
+     as a limitation upon, or waiver of, any privileges and immunities
+     that apply to the Licensor or You, including from the legal
+     processes of any jurisdiction or authority.
+
+
+=======================================================================
+
+Creative Commons is not a party to its public licenses.
+Notwithstanding, Creative Commons may elect to apply one of its public
+licenses to material it publishes and in those instances will be
+considered the “Licensor.” The text of the Creative Commons public
+licenses is dedicated to the public domain under the CC0 Public Domain
+Dedication. Except for the limited purpose of indicating that material
+is shared under a Creative Commons public license or as otherwise
+permitted by the Creative Commons policies published at
+creativecommons.org/policies, Creative Commons does not authorize the
+use of the trademark "Creative Commons" or any other trademark or logo
+of Creative Commons without its prior written consent including,
+without limitation, in connection with any unauthorized modifications
+to any of its public licenses or any other arrangements,
+understandings, or agreements concerning use of licensed material. For
+the avoidance of doubt, this paragraph does not form part of the public
+licenses.
+
+Creative Commons may be contacted at creativecommons.org.
