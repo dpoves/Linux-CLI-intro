@@ -13,6 +13,7 @@
 ## Part 2 -
 ### 2.1 - Moving around directories
 ### 2.2 - Listing files
+### 2.3 - Launching programs and creating aliases
 
 # 1.0 - Introduction
 --------------------
