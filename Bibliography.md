@@ -25,3 +25,4 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/
 
 ## Other
 * Williams, Sam. **Free as in Freedom: Richard Stallman's Crusade for Free Software**, O'Reilly, 2002.
+--------------
