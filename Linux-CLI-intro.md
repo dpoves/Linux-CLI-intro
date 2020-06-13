@@ -1273,7 +1273,49 @@ $ \ls
 Desktop  Documents  Downloads  Images  Music  Pictures  Public  Templates  Videos
 ```
 
-The only different in this instance that the unalias **ls** won't colourise the output.
+The only difference in this instance is that the unalias **ls** won't colourise the output.
+
+# 2.3.1 - Launching programs and creating aliases key points
+------------------------------------------------------------
+
+## Commands
+```shell
+clear       Clear the terminal screen
+echo        Display messages or variable values
+file        Display file type
+alias       Set or edit an alias
+unalias     Delete an alias
+```
+
+## Concepts
+```
+[TAB]               autocomplete
+./executable        Launch local executable
+/path/executable    Launch executable
+\aliasname          Execute unaliased version of command
+```
+
+# Further reading
+* _Robbins, Arnold_. **Bash Pocket Reference**, O'Reilly, 2010. **Pages 58 and 17**
+
+* _Ward, Brian_. **How Linux Works, 2nd edition**, No Starch Press, 2015. **Chapter 2**
+
+* _Blum, Richard; Bresnahan, Christine_. **Linux Command Line and Shell Scripting Bible, 3rd edition**, Wiley, 2015. **Chapters 3 and 5**
+
+# 2.3.2 - Launching programs and creating aliases (EXERCISES)
+-------------------------------------------------------------
+
+## Exercises
+
+1. Clear the screen of your terminal.
+2. Display the value of your $PATH.
+3. Using the autocomplete feature check how many commands start with an s in your system.
+4. What type if file is _/etc/resolv.conf_?
+5. What type of file is _/usr/bin_?
+6. Check the exercices from the previous section and create some aliases for some of the ls commands you created.
+7. Create an alias to list the current folder by just using . and one that goes back up one directory by typing ..
+8. Check what happens when you manually unalias the aliases you have created.
+9. How can you check that you have removed an alias?
 
 # Bibliography
 --------------
