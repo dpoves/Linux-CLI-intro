@@ -15,6 +15,12 @@
 ### 2.2 - Listing files
 ### 2.3 - Launching programs and creating aliases
 
+# NOTICE
+**THIS IS A WORK IN PROGRESS.**
+Updates are done frequently and new material is added as often as possible. There are going to be spelling mistakes, editing work and other changes once all the course parts are completed. Currently the focus is on adding all the material before editing and correcting.
+
+Any and all feedback is appreciated.
+
 # 1.0 - Introduction
 --------------------
 
@@ -26,7 +32,10 @@ The selection I have made covers areas and commands that any Linux user or sysad
 
 The first part covers some theory that will allow you to understand what Linux is and the philosophy behind it. It isn't compulsory to learn about it but it will help you better understand what the design principles and why certain things are done in a certain way.
 
-I will be quite happy to hear any feedback, let me know about any typos so they can be corrected and feel free to take part if you want to.
+I have tried to ensure that all the chapters build on top of the previous ones. If I introduce a concept that relies on some other knowledge, this will have already been presented in a previous chapter. 
+
+My preference is for the knowledge to be introduced in a natural way, setting the base and groundwork upon which to build from. If you are new to Linux following it in order will yield the maximum benefit.
+
 
 ## A note on console fonts
 Consoles are configured by default with monospace fonts and that have clear and distinctive fonts.
@@ -35,7 +44,7 @@ The reason for this is that some characters with certain fonts are difficult to 
 
 The clearest example are 1, I, l, 0 and O.
 
-If this document has been rendered in a way that you can't differentiate between the above charactesrs please get an updates version or go to the course's website to get a different or updated version:
+If this document has been rendered in a way that you can't differentiate between the above characters please get an updates version or go to the course's website to get it in a different format:
 
 https://github.com/dpoves/Linux-CLI-intro
 
@@ -188,6 +197,9 @@ Shareware software is very similar to commercial software. It is also copyrighte
 * **Freeware**
 Freeware is distributed without any payment expected by the author. Freeware software might be a basic version of a more fully featured program, or it can be bundled to promote another software. Freeware normally comes with no source code. Some examples of freeware are Adobe Reader, most of Windows drivers.
 Please, note that freeware should not be confused with **free software**.
+
+* **SaaS**
+The advent of cloud computing has made this model more common place. The software is normally hosted on the cloud or web and accessed via a web browser and it is paid on a subscription base. In this kind of software distribution it is unlikely for you to have access to both the binary and the source code. Office365 and Google Docs are examples.  
 
 * **Open Source Software**
 Open Source Software is defined by 10 principles that are available at https://opensource.org/osd-annotated
@@ -1316,6 +1328,93 @@ unalias     Delete an alias
 7. Create an alias to list the current folder by just using . and one that goes back up one directory by typing ..
 8. Check what happens when you manually unalias the aliases you have created.
 9. How can you check that you have removed an alias?
+
+# 2.4.0 - Getting help
+----------------------
+
+## man
+
+We have seen that Linux comes with a lot of commands built in. It isn't realistic to expect anyone to remember all of the commands and all of their individual options.
+
+Linux and Unix systems come with a set of reference manuals, and usually if a new command is installed it will at the time of installation add its own manuals to the system.
+
+**man** stands for _manual_ and it is a program that acts as an interface for those system reference manuals.
+
+**man** requires an argument, the name of the command you want information of.
+
+For example, let's get some information abou the **ls** command.
+
+```shell
+$ man ls
+LS(1)                                                      User Commands                                                      LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+```
+
+You can use the arrow keys and scroll buttons (or space bar) to explore the manual entry for **ls**.
+
+Have a look around and once you are finished press **q** to **q**uit.
+
+We need to look two aspects of **man**. First, how we call the program, as in how we query help for specific commands. Second, how we navigate through the interface. 
+
+Let's look at the first part. The syntax is the same as the first example:
+
+```
+man command_name
+```
+
+
+**man -f _page_**
+(whatis)
+
+**man -k *search_term***
+(apropos)
+
+
+
+
+
+
+man
+	command [-x] {on|off} filename …
+
+	-Anything between square brackets [] is optional.
+	-Anything followed by an ellipsis … can be repeated
+	-Curly braces {} mean that you should select one of the items separated by |
+
+1   Executable programs or shell commands
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions, e.g. /etc/passwd
+       6   Games
+	   7   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
+
+
+info
+	?	Displayes help information
+	N	Moves to the next node
+	P	Moves back to the previous node
+	U	Moves up in the hierarchy
+	L	Display the last info page read
+	T	Top page for the topic
+	Q	Quit
+
+apropos (man -k)
+
+whatis
+
+A complete set of online man pages for different variants of Unix and Linux can be found at the FreeBSD documentation project: freebsd.org/cgi/man.cgi
+
+man intro
+
+man man
 
 # Bibliography
 --------------
