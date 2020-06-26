@@ -17,7 +17,9 @@
 
 # NOTICE
 **THIS IS A WORK IN PROGRESS.**
-Updates are done frequently and new material is added as often as possible. There are going to be spelling mistakes, editing work and other changes once all the course parts are completed. Currently the focus is on adding all the material before editing and correcting.
+Updates are done frequently and new material is added as often as possible. There are going to be spelling mistakes, editing work and other changes before all the course parts are completed. Currently the focus is on adding all the material before editing and correcting.
+
+This notice will remain until the course is complete.
 
 Any and all feedback is appreciated.
 
@@ -38,7 +40,7 @@ My preference is for the knowledge to be introduced in a natural way, setting th
 
 
 ## A note on console fonts
-Consoles are configured by default with monospace fonts and that have clear and distinctive fonts.
+Consoles are configured by default with mono-space fonts and that have clear and distinctive fonts.
 
 The reason for this is that some characters with certain fonts are difficult to distinguish.
 
@@ -109,7 +111,7 @@ The kernel is at the core of any Operating System but it is a component most use
 Users would normally interact with other software components like:
 
 * **Command line shells**
-Many years ago users interacted with computers exclusively by typing commands in a program called a shell. The commands would allow to manipulate files, execute programs and so on. Many computer users don't use text based shells, but they are still important for intermmediate and advanced users. This course is exclusively about using the terminal and such programs. Many different shells are available. The most popular is the Bash shell, also known as Bourne Again Shell, although different distributions and operating systems might use their own variants.
+Many years ago users interacted with computers exclusively by typing commands in a program called a shell. The commands would allow to manipulate files, execute programs and so on. Many computer users don't use text based shells, but they are still important for intermediate and advanced users. This course is exclusively about using the terminal and such programs. Many different shells are available. The most popular is the Bash shell, also known as Bourne Again Shell, although different distributions and operating systems might use their own variants.
 
 * **Graphical User Interfaces**
 GUIs rely on menus, icons and a mouse pointer. Each OS has their own graphical interface that makes it distinct. Linux relies on the X Window System as its GUI. X defines protocol and graphics primitives so additional software like window managers and desktop environments are used to provide a complete user experience. Linux has several available interfaces that can be installed separately.
@@ -118,7 +120,7 @@ GUIs rely on menus, icons and a mouse pointer. Each OS has their own graphical i
 Nearly all OS come with a set of utilities or applications like text editors, calculators, maintenance tools and so on.
 
 * **Libraries**
-Libraries are collections of programming functions that provice critical services. They are used by nearly all programs. Normaly it will only be programmers that will need to work with them directly.
+Libraries are collections of programming functions that provide critical services. They are used by nearly all programs. Normally it will only be programmers that will need to work with them directly.
 
 * **Productivity programs**
 These would be programs like web browsers, word processors and similar. Most users will use computers to work with this kind of programs. This kind of programs are technically independent of the OS, but sometimes they are related to a specific one. For example, Microsoft Office on Windows. Although programs can be available for more than one OS they will vary due to the different OS and GUIs.
@@ -156,7 +158,7 @@ This is a summary from the Wikipedia's entry on Unix Philosophy (https://en.wiki
 
 The Unix is a set of cultural norms and philosophical approaches to minimalist, modular software development.
 
-Early Unix developers brought the concepts of modularity and reusability into software engineering practice. Over time, the leading developers of Unix and associated programs established a set of cultural norms for developing software. These norms have been termed the "Unix philosophy."
+Early Unix developers brought the concepts of modularity and re-usability into software engineering practice. Over time, the leading developers of Unix and associated programs established a set of cultural norms for developing software. These norms have been termed the "Unix philosophy."
 
 It emphasises building **simple**, **short**, **clear**, **modular**, and **extensible** code that can be easily maintained and repurposed by developers other than its creators.
 
@@ -184,12 +186,12 @@ You can read more about the Unix philosophy in the following link: https://catb.
 ------------------------------
 
 ## Types of software
-Software is distributed in different forms. Each way has its own expections on regards to payment, redistribution and user's rights.
+Software is distributed in different forms. Each way has its own expectations on regards to payment, redistribution and user's rights.
 
 We can divide software in some of the following categories:
     
 * **Commercial software**
-Individuals or companies develope commercial software with the intention of selling it for a profit. Commercial software source code is usually kept secret. Redistribution or copying of commercial software is generally illegal. Microsoft Windows and Microsoft Office are examples of commercial software.
+Individuals or companies develop commercial software with the intention of selling it for a profit. Commercial software source code is usually kept secret. Redistribution or copying of commercial software is generally illegal. Microsoft Windows and Microsoft Office are examples of commercial software.
 
 * **Shareware software**
 Shareware software is very similar to commercial software. It is also copyrighted and the developer asks for payment. The main difference is the way it is distributed. You are allowed to try the software for free for a period of time, and even copy it, as long as after a the trial period expires you buy a license and don't distribute the licensed version. Shareware was very popular in the 1990's.
@@ -244,7 +246,7 @@ Exposing the source code allows the community to review and improve it. This mig
 Having access to the source code allows users to modify and customise the software. Rather than having a program nearly do what the user needs from it, it can be modified so it does exactly what the user wants. It can be argued that this benefit is only available to those with the skill, time or money to modify or able to hire someone to modify the software.
 
 * **Lower cost**
-The open source and free software definition allows the selling of software, algthough due to how it is distributed it tends to be available for free (as in no money paid). However, there are services associated with using FLOSS (Free/Libre Open Source Software), like support, consultancy and others that need to be taken into consideration.
+The open source and free software definition allows the selling of software, although due to how it is distributed it tends to be available for free (as in no money paid). However, there are services associated with using FLOSS (Free/Libre Open Source Software), like support, consultancy and others that need to be taken into consideration.
 
 * **No vendor lock-in**
 Proprietary software can make it difficult for products of the competition by using closed file formats and by not playing nice with open standards or products. FLOSS products can be forked and/or modified to support additional file formats, protocols or standards.
@@ -259,7 +261,7 @@ Ultimately this is a matter of opinion and you should reach your own conclusions
 ## Copyright and software
 Copyright law has existed for several centuries and although it was never designed to deal with software it has been and it is applied to it.
 
-A copyright is a legally recognised right to create a copy of something. For example, if you write a book, take a photograph, make a video or write a program, in most jurisdictions you alone have the right to make copies of it. You can grant others a right to make those copie or handover the copyright to others.
+A copyright is a legally recognised right to create a copy of something. For example, if you write a book, take a photograph, make a video or write a program, in most jurisdictions you alone have the right to make copies of it. You can grant others a right to make those copies or handover the copyright to others.
 
 Every country has different copyright laws but most countries are signatories of the Berne Convention. The convention enforces a requirement that member countries recognize copyrights held by the citizens of all other member countries. You can create your work in your home country and it will be automatically copyrighted in all the other member countries.
 
@@ -279,7 +281,7 @@ Most software is released with a licence which is a document that modifies the r
 
 Those licences are usually called End-User Licence Agreements (EULAs), shrink-wrap licences or click-though licences. Open Source software is distributed with the licence in the form of a file, normally called LICENSE or COPYING.
 
-Software licences can modify copyright terms by making them more or less restrictive. Some licences tie the software to a single machine, which is a more restritive term than standard copyright law.
+Software licences can modify copyright terms by making them more or less restrictive. Some licences tie the software to a single machine, which is a more restrictive term than standard copyright law.
 
 The Linux kernel is distributed under the General Public Licence (GPL) which is a Free/Libre licence. The GPL grants you the right to redistribute the software both in source code and binary form. This kind of licence provides less restrictions than standard copyright law.
 
@@ -316,18 +318,18 @@ https://www.gnu.org/philosophy/free-sw.html.en
 
 These freedoms are similar to the OSI principles but there are some important differences in interpretation.
 
-By FSF standards all software in the world would be free following the above four freedoms. Some Linux distributions are completely free but some distributions include proprietary software. For example some vendors don't publish the source code for their drivers. In some cases, a part of the distro is propietary to limit redistribution without charging.
+By FSF standards all software in the world would be free following the above four freedoms. Some Linux distributions are completely free but some distributions include proprietary software. For example some vendors don't publish the source code for their drivers. In some cases, a part of the distro is proprietary to limit redistribution without charging.
 
-Free Software isn't necessarily free of charge and the four freedoms don't limit the possibility of selling it for a fee, but free software's price tends to be zero. The problem with propietary software isn't about the cost, but how it restricts its redistribution.
+Free Software isn't necessarily free of charge and the four freedoms don't limit the possibility of selling it for a fee, but free software's price tends to be zero. The problem with proprietary software isn't about the cost, but how it restricts its redistribution.
 
-The takeaway about software freedom is that it empowers users, not just developers or companies. If you can modify a program that nearly does what you need it to do, to exactly do what you want it gives it an enormous advantage over a propietary version.
+The takeaway about software freedom is that it empowers users, not just developers or companies. If you can modify a program that nearly does what you need it to do, to exactly do what you want it gives it an enormous advantage over a proprietary version.
 
 By then distributing your modified version you can help others that had the same problem. The application of the FSF philosophy has a benefit for the wider community.
 
 The FSF licences have sometimes been called copyleft. This is a wordplay with copyright. Where copyright restricts the usage rights, copyleft widens them. Copyleft provides provisions meant to guarantee the freedom of users to copy software, rather than restrict it.
 
 ## The General Public Licence (GPL)
-The legal expresion of the principles of the FSF are written in the GPL. Two versions of the GPL are the most common, versions 2 and 3.
+The legal expression of the principles of the FSF are written in the GPL. Two versions of the GPL are the most common, versions 2 and 3.
 
 Both versions apply the four freedoms. They also make explicit an implication of those four freedoms by stating that any derivative work has to be released under the same GPL licence.
 
@@ -357,7 +359,7 @@ The GFDL is meant to be used for documentation rather than software.
 
 The GPL was written with software in mind so its wording doesn't fit static documents. The GFDL fills this need.
 
-Many projects of the Wikimedia Foundation, including Wikipedia use the GFDL in conjuction with Creative Commons.
+Many projects of the Wikimedia Foundation, including Wikipedia use the GFDL in conjunction with Creative Commons.
 
 ## Further reading
 There are other types of licences like Creative Commons that aren't discussed here. You can read more in the following links.
@@ -385,13 +387,13 @@ https://opensource.org/licenses/alphabetical
 
 
 ## The Open Source Philosophy
-During the 1980s and 1990s the free software movement gain support in some circles, specially academia and bobbysts. Making inroads in business was proving more difficult.
+During the 1980s and 1990s the free software movement gain support in some circles, specially academia and hobbyists. Making inroads in business was proving more difficult.
 
 Some businesses adopted open source software, but this was slow and minimal. Businesses distrusted software that was offered for free and worried about future liability.
 
 Mainly the adoption was spearheaded by administrators that had small budgets and started installing Linux, Samba, Apache and other free software in order to save money compared with the commercial alternatives available at the time.
 
-The FSF's advocacy is based on the moral imperative that all software should be free. This is appealing to some people, but businesses, specially the ones that make money off selling software would disagree. They would reject using free software as it clashed with their worldview.
+The FSF's advocacy is based on the moral imperative that all software should be free. This is appealing to some people, but businesses, specially the ones that make money off selling software would disagree. They would reject using free software as it clashed with their world-view.
 
 This was one of the reasons why the OSI creators designed their organisation as a way to advocate free software. They coined the term Open Source and softened some of the FSF's imperatives. OSI aims to promote Open Source Software in the business world.
 
@@ -407,7 +409,7 @@ The OSI has certified many licences as Open Source but not all of them have this
 
 There is software that has been released with an Open Source licence and has been then moved into closed source products. macOS is one example of this.
 
-The OSI doesn't oppose this as long as the licence originally used allows it. The FSF on the other side forbids this explicitely.
+The OSI doesn't oppose this as long as the licence originally used allows it. The FSF on the other side forbids this explicitly.
 
 Ultimately, the OSI saw as a benefit that businesses adopted Open Source Software above said businesses adopting a FLOSS philosophy, taking a more pragmatic approach. 
 
@@ -415,7 +417,7 @@ Generally speaking free software is also open source software, but some FSF appr
 
 Nowadays there is some tension between free software purists and the open source community although they share similar goals.
 
-You have seen me use the FLOSS (Free/Libre Open Source Software) acronym before and this as umbrella definition that covers both types of software. You might see also the FOSS (Free Open Source Software) acronym, although this is being superseeded by FLOSS.
+You have seen me use the FLOSS (Free/Libre Open Source Software) acronym before and this as umbrella definition that covers both types of software. You might see also the FOSS (Free Open Source Software) acronym, although this is being superseded by FLOSS.
 
 
 ## The Definition of Open Source Software
@@ -445,7 +447,7 @@ The licence must not forbid use of the program in any field, such as in business
 The licence must apply to anybody who receives the program without needing a separate agreement.
 
 8. **Licence must not be specific to a product**
-The licence must not require that the program be used or distributed as part of a larger program—that is, you may extract a single program from a larger collection and redistribute it alone.
+The licence must not require that the program be used or distributed as part of a larger program — that is, you may extract a single program from a larger collection and redistribute it alone.
 
 9. **Licence must not restrict other software** The licence must not impose restrictions on other software that’s distributed along with the licenced software.
 
@@ -455,7 +457,7 @@ The licence must not be restricted based on specific technologies or interfaces.
 
 The first three of these principles are the most important. At least to understand the point of open source technology.
 
-The 10 principles have a resemblance to the FSF's four freedoms. There are, as it has been repeteadly pointed out, differences, specially in terms of licensing requirements for derived works.
+The 10 principles have a resemblance to the FSF's four freedoms. There are, as it has been repeatedly pointed out, differences, specially in terms of licensing requirements for derived works.
 
 # 1.7 - Further reading
 -----------------------
@@ -758,7 +760,7 @@ $ ls /sbin
 ```
 
 ## The zero or more characters wildcard *
-Some commands accept the use of wilcards. We are going to see some examples with **ls**, but there are more commands, specially the ones that are used to manipulate files and directories that accept them.
+Some commands accept the use of wildcards. We are going to see some examples with **ls**, but there are more commands, specially the ones that are used to manipulate files and directories that accept them.
 
 ```shell
 $ ls *
@@ -807,7 +809,7 @@ Or all files ending with foo:
 $ ls *foo
 ```
 
-Strictly speaking, for the above examples if there was to be a file just called "foo" the above two commands would find this file it would match both criterias. The idea in any case is that you will be likely be using * to search for files with partial matches like above.
+Strictly speaking, for the above examples if there was to be a file just called "foo" the above two commands would find this file it would match both criteria. The idea in any case is that you will be likely be using * to search for files with partial matches like above.
 
 You can also list files that contain the string foo using * on both ends:
 
@@ -972,7 +974,7 @@ The command has many different arguments divided in three areas:
 * **S**orting
 * **I**nformation displayed
 
-Just see a selectin of available arguments:
+Just see a selection of available arguments:
 
 **Formatting**
 
@@ -1018,11 +1020,11 @@ ls -lk | I | display size in kibibytes
 ls -p | F | append the / symbol to the end of directories
 ls -R | I | list contents of subdirectories recursively
 ls -s | I | show the allocated size of each file in blocks
-ls -F | I | append indicator (*	executable file, / directory, @	symbolic link /extended attributes, = socket, %	 whiteout, | FIFO whiteout,> doors (I believe Solaris only)
+ls -F | I | append indicator (*	executable file, / directory, @	symbolic link /extended attributes, = socket, %	 white-out, | FIFO white-out,> doors (I believe Solaris only)
 
 That is an very long list and it isn't complete but it illustrates the point that Unix is about specialised tools working together.
 
-Right now it is only one command, but soon enough you will learn how to make commands interact with each other. That is the real power of the CLI. Each command is like a LEGO piece. On its own it can't do complicated builds, but the more pieces you have the more ellaborate and elegant they can be.
+Right now it is only one command, but soon enough you will learn how to make commands interact with each other. That is the real power of the CLI. Each command is like a LEGO piece. On its own it can't do complicated builds, but the more pieces you have the more elaborate and elegant they can be.
 
 The above list isn't meant to be memorised. You only need to know that **ls** has many arguments that can help you list files you need, in a specific order, with a given format and the information of your choice.
 
@@ -1039,7 +1041,7 @@ ls		List files
 command [options] [arguments]
 ```
 
-## Wilcards
+## Wildcards
 ```
 *	Zero or more characters
 ?	One character
@@ -1065,7 +1067,7 @@ command [options] [arguments]
 [!a-b,d] Any characters except a to b and d
 ```
 
-## Unix philosopy
+## Unix philosophy
 Individual specialised tools or programs that can easily interact between them to solve more complicated problems.
 
 
@@ -1107,7 +1109,7 @@ You can easily clear the screen contents with the **clear** command.
 $ clear
 ```
 
-We will be seeing later on some keyboard shortcuts but you can achieve the same result with the keyboard combination of **ctrl-L**. 
+We will be seeing later on some keyboard shortcuts but you can achieve the same result with the keyboard combination of **Ctrl-L**. 
 
 ## Using the [TAB] key
 The Bash shell has an autocompletion feature that is triggered with the tab key.
@@ -1160,9 +1162,9 @@ This doesn't look very useful at the moment, but if you develop shell scripts la
 ## Launching programs
 We saw before that the $PATH variable indicates which directories are searched when you type a command.
 
-Linux/Unix won't execute a program in the local folder like DOS/Windows does. Unless the directory is in the $PATH variable you need to explicitely indicate you want to execute a program.
+Linux/Unix won't execute a program in the local folder like DOS/Windows does. Unless the directory is in the $PATH variable you need to explicitly indicate you want to execute a program.
 
-This is done for security reasons. An attacker could create a programm in a directory with the same name as a commonly invoked program and trick an administrator into executing it without realising that it is a local and malicious program.
+This is done for security reasons. An attacker could create a program in a directory with the same name as a commonly invoked program and trick an administrator into executing it without realising that it is a local and malicious program.
 
 If you want to execute a program and you want to explicitly indicate that it is a local one you will need to add **./** in the front.
 
@@ -1324,7 +1326,7 @@ unalias     Delete an alias
 3. Using the autocomplete feature check how many commands start with an s in your system.
 4. What type if file is _/etc/resolv.conf_?
 5. What type of file is _/usr/bin_?
-6. Check the exercices from the previous section and create some aliases for some of the ls commands you created.
+6. Check the exercises from the previous section and create some aliases for some of the ls commands you created.
 7. Create an alias to list the current folder by just using . and one that goes back up one directory by typing ..
 8. Check what happens when you manually unalias the aliases you have created.
 9. How can you check that you have removed an alias?
@@ -1342,7 +1344,7 @@ Linux and Unix systems come with a set of reference manuals, and usually if a ne
 
 **man** requires an argument, the name of the command you want information of.
 
-For example, let's get some information abou the **ls** command.
+For example, let's get some information about the **ls** command.
 
 ```shell
 $ man ls
@@ -1398,7 +1400,7 @@ man
 
 
 info
-	?	Displayes help information
+	?	Displays help information
 	N	Moves to the next node
 	P	Moves back to the previous node
 	U	Moves up in the hierarchy
