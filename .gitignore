@@ -351,3 +351,4 @@ MigrationBackup/
 compile_full_md.sh
 .gitignore
 .vscode/settings.json
+.vscode/spellright.dict
