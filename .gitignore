@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 compile_full_md.sh
 .gitignore
+.vscode/settings.json
