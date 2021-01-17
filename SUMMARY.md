@@ -1,7 +1,6 @@
 # Table of contents
 
 * [README](README.md)
-* [LICENSE](license.md)
 * [Index](0.-index.md)
 * [Part 1 - LINUX AND THE FLOSS PHILOSOPHY](part-1-linux-and-the-floss-philosophy/README.md)
   * [1.6 - The Open Source Initiative](part-1-linux-and-the-floss-philosophy/1.6-the-open-source-initiative.md)
@@ -26,5 +25,6 @@
   * [2.0 -](part-2/2.0-using-the-command-line.md)
   * [2.2.0 - Listing files](part-2/2.2.0-listing-files.md)
 * [Bibliography](bibliography.md)
+* [LICENSE](license.md)
 * [Linux-CLI-intro](linux-cli-intro.md)
 
