@@ -2,7 +2,7 @@
 
 * [README](README.md)
 * [Index](0.-index.md)
-* [Part 1 - LINUX AND THE FLOSS PHILOSOPHY](Chapter-1-linux-and-the-floss-philosophy/README.md)
+* [Chapter 1 - LINUX AND THE FLOSS PHILOSOPHY](Chapter-1-linux-and-the-floss-philosophy/README.md)
   * [1.0 Introduction](Chapter-1-linux-and-the-floss-philosophy/1.0-introduction.md)
   * [1.1 - Definition of an Operating System](Chapter-1-linux-and-the-floss-philosophy/1.1-definition-of-an-operating-system.md)
   * [1.2 - Unix/Linux Philosophy](Chapter-1-linux-and-the-floss-philosophy/1.2-unix-and-linux-philosophy.md)
@@ -12,7 +12,7 @@
   * [1.6 - The Open Source Initiative](Chapter-1-linux-and-the-floss-philosophy/1.6-the-open-source-initiative.md)
   * [1.7 - Further reading](Chapter-1-linux-and-the-floss-philosophy/1.7-further-reading.md)
   
-* [Part 2](Chapter-2/README.md)
+* [Chapter 2](Chapter-2/README.md)
   * [2.0 -](Chapter-2/2.0-using-the-command-line.md)
   * [2.1.0 - Moving around directories](Chapter-2/2.1.0-moving-around-directories.md)
   * [2.1.1 Key points](Chapter-2/2.1.1-key-points.md)
