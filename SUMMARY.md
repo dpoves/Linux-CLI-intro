@@ -2,28 +2,47 @@
 
 * [README](README.md)
 * [Index](0.-index.md)
+<<<<<<< HEAD
 * [Part 1 - LINUX AND THE FLOSS PHILOSOPHY](part-1-linux-and-the-floss-philosophy/README.md)
   * [1.0 Introduction](part-1-linux-and-the-floss-philosophy/1.0-introduction.md)
+=======
+* [Chapter 1 - LINUX AND THE FLOSS PHILOSOPHY](part-1-linux-and-the-floss-philosophy/README.md)
+  * [1.6 - The Open Source Initiative](part-1-linux-and-the-floss-philosophy/1.6-the-open-source-initiative.md)
+>>>>>>> 27b39e08a4d96dae3a7718456108cb52226f8d88
   * [1.1 - Definition of an Operating System](part-1-linux-and-the-floss-philosophy/1.1-definition-of-an-operating-system.md)
   * [1.2 - Unix/Linux Philosophy](part-1-linux-and-the-floss-philosophy/1.2-unix-and-linux-philosophy.md)
   * [1.3 - Open Source Principles](part-1-linux-and-the-floss-philosophy/1.3-open-source-principles.md)
   * [1.4 - Software Licensing](part-1-linux-and-the-floss-philosophy/1.4-software-licensing.md)
+<<<<<<< HEAD
   * [1.5 - The Free Software Foundation](part-1-linux-and-the-floss-philosophy/1.5-the-free-software-foundation-and-free-software.md)
   * [1.6 - The Open Source Initiative](part-1-linux-and-the-floss-philosophy/1.6-the-open-source-initiative.md)
   * [1.7 - Further reading](part-1-linux-and-the-floss-philosophy/1.7-further-reading.md)
   
 * [Part 2](part-2/README.md)
+=======
+  * [1.2 - Unix/Linux Philosophy](part-1-linux-and-the-floss-philosophy/1.2-unix-linux-philosophy.md)
+  * [1.0 Introduction](part-1-linux-and-the-floss-philosophy/1.0-introduction.md)
+  * [1.7 - Further reading](part-1-linux-and-the-floss-philosophy/1.7-further-reading.md)
+  * [1.5 - The Free Software Foundation](part-1-linux-and-the-floss-philosophy/1.5-the-free-software-foundation.md)
+* [Chapter 2](part-2/README.md)
+>>>>>>> 27b39e08a4d96dae3a7718456108cb52226f8d88
   * [2.1.0 - Moving around directories](part-2/2.1.0-moving-around-directories.md)
   * [2.0 -](part-2/2.0-using-the-command-line.md)
   * [2.1.1 Key points](part-2/2.1.1-key-points.md)
   * [2.2.1 Key points](part-2/2.2.1-key-points.md)
   * [2.3.1 Key points](part-2/2.3.1-key-points.md)
-  * [2.3.2 - Launching programs and creating aliases \(EXERCISES\)](part-2/2.3.2-launching-programs-and-creating-aliases.md)
+  * [2.3.2 - Launching programs and creating aliases \(EXERCISES\)](part-2/2.3.2-launching-programs-and-creating-aliases-exercises.md)
   * [2.3.0 - Launching programs and creating aliases](part-2/2.3.0-launching-programs-and-creating-aliases.md)
   * [2.4.0 - Getting help](part-2/2.4.0-getting-help.md)
   * [2.4.2 Exercises](part-2/2.4.2-exercises.md)
+<<<<<<< HEAD
   * [2.2.2 - Listing files \(EXERCISES\)](part-2/2.2.2-exercises.md)
   * [2.1.2 - Moving around directories \(EXERCISES\)](part-2/2.1.2-exercises.md)
+=======
+  * [2.2.2 - Listing files \(EXERCISES\)](part-2/2.2.2-listing-files-exercises.md)
+  * [2.1.2 - Moving around directories \(EXERCISES\)](part-2/2.1.2-moving-around-directories-exercises.md)
+  * [2.0 -](part-2/2.0.md)
+>>>>>>> 27b39e08a4d96dae3a7718456108cb52226f8d88
   * [2.2.0 - Listing files](part-2/2.2.0-listing-files.md)
 * [Bibliography](bibliography.md)
 * [LICENSE](license.md)
