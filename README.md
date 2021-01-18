@@ -24,7 +24,7 @@ This notice will remain until the course is complete.
 
 Any and all feedback is appreciated.
 
-### Getting in touch
+## Getting in touch
 
 If you want to get in touch you can reach me via the following.
 
