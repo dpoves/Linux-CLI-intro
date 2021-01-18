@@ -1,6 +1,5 @@
-# README
+# Linux-CLI-Intro
 
-## Linux-CLI-intro
 ## An introduction to the Linux command line.
 
 In the past I have provided some training on the basics of using the Linux command line to friends and colleagues. I thought that it would be a good idea to share some of the notes I made so others can benefit of it.
@@ -9,7 +8,7 @@ Although it might seem complicated at the beginning, the basic set of commands i
 
 That, and practice. Using the commands often will help you cement the knowledge and build your confidence.
 
-I have focused on the commands that you are most likely going to use 90% of the time you are working with any system. (No scientific argument for the 90% value, but I hope you understand my point.) :)
+I have focused on the commands that you are most likely going to use 90% of the time you are working with any system. \(No scientific argument for the 90% value, but I hope you understand my point.\) :\)
 
 I believe that a good foundation will provide you with the building blocks to move towards more complex material, and additional self-learning.
 
@@ -36,3 +35,4 @@ If you want to get in touch you can reach me via the following.
 Any feedback is appreciated. If you find any typos, feel that certain sections aren't clear enough or find any mistakes, please let me me know.
 
 I hope you find the course useful!
+

@@ -1,7 +1,7 @@
 # Table of contents
 
-* [README](README.md)
-* [Index](0.-index.md)
+* [Linux-CLI-Intro](README.md)
+* [Index](index.md)
 * [Chapter 1 - LINUX AND THE FLOSS PHILOSOPHY](chapter-1-linux-and-the-floss-philosophy/README.md)
   * [1.0 Introduction](chapter-1-linux-and-the-floss-philosophy/1.0-introduction.md)
   * [1.1 - Definition of an Operating System](chapter-1-linux-and-the-floss-philosophy/1.1-definition-of-an-operating-system.md)
